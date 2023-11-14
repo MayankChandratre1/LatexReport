@@ -1,0 +1,502 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}% Required for inserting images
+\usepackage[letterpaper, top=1in, bottom=1.15in, left=1.5in, right=0.6in]{geometry}
+\usepackage[printonlyused,withpage]{acronym}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{ragged2e}
+
+
+
+\title{SeminarReport}
+\author{mayankmchandratre} %Enter Your Name
+\date{October 2023}
+
+\usepackage{titlesec}
+\usepackage{mathptmx} % Times New Roman font
+\titleformat{\chapter}[display]
+  {\centering\bfseries\huge}
+  {\thechapter.}
+  {2.25pt}
+  {}
+  [{\rule{\textwidth}{2.25pt}}]
+  
+
+
+\begin{document}% everything to be visble should be between begin{document}...end{document}
+
+\pagenumbering{gobble}
+\begin{center} %cover page
+    \textbf{\large{Dr. Babasaheb Ambedkar Technological University,\\ Lonere-402104}}\\ %University Name
+    \vspace{2cm}
+    \includegraphics[scale=0.5]{dbatu.jpeg} %Uni Logo
+    \vspace{1cm}
+
+    A SEMINAR REPORT\\ON\\
+    \textbf{\large{"FIREBASE BY GOOGLE"}}\\ %change to your topic name
+    \vspace{1cm}
+    \textit{Submitted By}\\
+    \vspace{0.5cm}
+    Mayank Mandar Chandratre\\ %change to your info
+    Class SY-CSE\\
+    Roll No.07\\
+    \vspace{1cm}
+    \textit{Under The Guidance of}\\
+    \vspace{0.5cm}
+    \textbf{Prof. M. P. Bidve} %guide name
+    \vspace{1cm}
+
+    \includegraphics[scale=0.4]{download.jpeg}\\ %college logo
+    \vspace{0.5cm}
+   DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING\\
+    \textbf{M. S. BIDVE ENGINEERING COLLEGE,}\\ %college name
+    \textbf{LATUR- 413512}\\
+    2023-24\\
+    
+    
+\end{center}
+\newpage
+\pagenumbering{Roman}
+
+
+\begin{center}
+    \textbf{\huge{CERTIFICATE}}\\
+    \vspace{2cm}
+\end{center}
+\large This is to certify that \textbf{Mr. Mayank Mandar Chandratre} has successfully completed his seminar on \textbf{Firebase By Google} as a part of academics of Third Semester of B. Tech. in CSE as prescribed by Dr. Babasaheb Ambedkar Technological University, Lonere during Academic year 2023-24.
+
+\vspace{5cm}
+
+
+
+
+\begin{center}
+
+    \textbf{Prof. M. P. Bidve} %names
+    \hspace{1.5cm}
+    \textbf{Prof. N. G. Dharashive}
+    \hspace{1.5cm}
+    \textbf{Prof. B. V. Dharne}\\
+    \textit{Guide} %designations
+    \hspace{4cm}
+    \textit{H.O.D.}
+    \hspace{4cm}
+    \textit{Principal}\\
+    
+
+\end{center}
+\newpage
+\begin{center}
+    \textbf{\huge{ACKNOWLEDGEMENT}}\\
+    \vspace{2cm}
+\end{center}
+\large I would like to express my deep sense of gratitude to my guide \& class techer Prof. M. P. Bidve for her inspiring and invaluable suggestions, I am deeply Indebted to her for sparing her valuable time in step by step successfully completion of this seminar.
+
+I am also grateful to our principal Prof. Dr. B.V. Dharne sir for his encouragement and constant support. I express my thanks to all the faculty \& staff members of the department. I am also thankful to my friends who have directly and indirectly helped me for successful completion.
+
+I acknowledge my gratitude to authors of the references and other sources referred in this context. Last but not the least; I am very much thankful to my parents who supported me in carrying out this work.
+
+\vspace{3cm}
+\hfill Mayank Chandratre %your name
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\pagenumbering{arabic}
+
+\titleformat{\section}[display]
+  {\centering\bfseries\Huge}
+  {\thesection}
+  {0.5em}
+  {}
+\section*{ \centering Abstract}
+
+
+\vspace{24pt} % Two blank lines (12 points)
+
+\raggedright
+{\fontsize{14}{0}\selectfont
+
+%Change the below text upto closing curly brace by your own abstract
+
+Firebase is a backend service provided by google to help developers build and maintain their web apps, mobile apps on cross-platform devices. It provides an \ac{SDK} and a Realtime database, authentication to its client. It is easy to use and newly emerging toolkit made by google. In web development it is quite useful to include different backend features in any software.
+
+With some basic knowledge of HTML, CSS and JS anyone can make desired web apps easily with the help of firebase. Firebase provide free plans of their services which is a great thing for beginner developers.
+
+Fiberbase provide services like Realtime Db, cloud messaging, authentication, analysis, etc. Which are mostly required for professional software. These services can be used by anyone with a valid google account in their projects. This helps us to write the projects more efficiently and saves us so much time. It uses the concepts of modular programming and provide different functions, which are used by developers as required.
+
+It comes with its own advantages and disadvantages. Advantages are – Free plans, Cross platform, etc. and disadvantages are minimum control, non-relational database, etc.
+
+}
+
+\onehalfspacing
+
+
+\setlength{\parindent}{1cm}
+
+\titleformat{\section}
+  {\bfseries\Huge}
+  {\thechapter.\arabic{section}\hspace{5pt}}
+  {0pt}
+  {\vspace{12pt}}
+
+\justifying
+\chapter{\fontsize{18}{0}\selectfont Introduction}%chapter name
+\section{{\fontsize{16}{0}\selectfont What is Firebase? }}%Section1 in chapter 1
+{\fontsize{14}{0}\selectfont
+
+
+\noindent 
+%Paste all section content below \noindent command
+%Paste it upto closing curly brace
+Google Firebase is a powerful backend-as-a-service platform that offers a suite of tools and services to help developers build, scale, and maintain web and mobile applications. It provides developers with easy-to-use features like real-time databases, authentication, hosting, storage, and machine learning capabilities.
+
+%after 1st paragraph put \hspace{1cm} beore first word of each paragraph
+\hspace{1cm}Firebase is a comprehensive mobile and web application development platform offered by Google. It provides a wide array of tools and services to help developers build, manage, and scale their applications more efficiently. Firebase includes features for real-time database management, user authentication, cloud storage, and cloud functions, making it an excellent choice for creating dynamic and responsive applications. Firebase also offers hosting, analytics, and performance monitoring capabilities, allowing developers to not only create feature-rich apps but also gain valuable insights into user behavior and app performance. The platform's strong integration with other Google services and its robust development community make it a popular choice for both novice and experienced developers seeking to streamline the app development process.
+
+
+\hspace{1cm}The tools provided by Firebase are cloud - based tools which can be used by developers by certain integration methods.
+
+}
+
+\newpage %section zalavr navin page vr jaych tr he command
+
+\section{{\fontsize{16}{0}\selectfont History}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Firebase evolved from Envolve, a prior startup founded by James Tamplin and Andrew Lee in 2011. Envolve provided developers an \ac{API} that enables the integration of online chat functionality into their websites. After releasing the chat service, Tamplin and Lee found that it was being used to pass application data that were not chat messages. Developers were using Envolve to sync application data such as game state in real time across their users. Tamplin and Lee decided to separate the chat system and the real-time architecture that powered it. They founded Firebase as a separate company in 2011 and it launched to the public in April 2012.
+
+\hspace{1cm}Firebase's first product was the Firebase Realtime Database, an \ac{API} that synchronizes application data across \ac{iOS}, Android, and Web devices, and stores it on Firebase's cloud. The product assists software developers in building real-time, collaborative applications.In 2014, Firebase launched two products: Firebase Hosting and Firebase Authentication. This positioned the company as a mobile backend as a service.
+
+\hspace{1cm}In October 2014, Firebase was acquired by Google. A year later, in October 2015, Google acquired Divshot, an HTML5 web-hosting platform, to merge it with the Firebase team.
+
+\hspace{1cm}In May 2016, at Google I/O, the company's annual developer conference, Firebase introduced Firebase Analytics and announced that it was expanding its services to become a unified \ac{Baas} platform for mobile developers. Firebase now integrates with various other Google services, including Google Cloud Platform, AdMob, and Google Ads to offer broader products and scale for developers. Google Cloud Messaging, the Google service to send push notifications to Android devices, was superseded by a Firebase product, Firebase Cloud Messaging, which added the functionality to deliver push notifications to Android, \ac{iOS} and web devices.
+
+\hspace{1cm}In October 2017, Firebase launched Cloud Firestore, a real-time document data base
+as the successor product to the original Firebase Realtime Database.}
+
+%below code is for including figures in report
+%begin{figure} .... end{figure} wala
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=2.5cm]{firebaseLogo.png  }%upload the image file on latex and put its name here
+    %upload by using upload button on top-left navigation bar
+    \caption{\fontsize{12}{0}\selectfont Firebase Logo }%Caption
+    \label{fig:logo} %unique label for each figure not visible
+\end{figure}
+
+\newpage
+\section{{\fontsize{16}{0}\selectfont Software Development Kit }}
+{\fontsize{14}{0}\selectfont
+\noindent
+\ac{SDK} stands for software development kit. Also known as a devkit, the \ac{SDK} is a set of software-building tools for a specific platform, including the building blocks, debuggers and, often, a framework or group of code libraries such as a set of routines specific to an \ac{OS}.\break
+
+
+\noindent
+A typical SDK might include some or all of these resources in its set of tools:
+
+%below code is for list of items
+%\item command will add new item
+\begin{enumerate}
+  \item Compiler
+  \item Code samples: Give a concrete example of an application or web page
+  \item Code libraries (framework): Provide a shortcut with code sequences that programmers will use repeatedly
+  \item Testing and analytics tools: Provide insight into how the application or product performs in testing and production environments
+  \item Documentation: Gives developers instructions they can refer to as they go
+  \item Debuggers: Help teams spot errors in their code so they can push out code that works as expected
+\end{enumerate}
+
+
+\hspace{1cm}Firebase supports \ac{SDK}s for Android, \ac{iOS}, and Web. Combined with Firebase security rules and Firebase Auth, the mobile and web SDKs support serverless app architectures where clients connect directly to your Firebase database. With a serverless architecture, you do not need to maintain an intermediary server between your clients and your Firebase database.
+
+\hspace{1cm}We can access the Firebase's \ac{SDK} to build and deploy or monitor our mobile apps, web apps and databases. It comes with a \ac{GUI} support hence we get an easy approach to work with the provided tools. We get access to Analytics, Documentation, Code-Snippets, etc. after logging in to its website.
+
+
+}
+\newpage
+\chapter{\fontsize{18}{0}\selectfont Real-time Database}
+\section{{\fontsize{16}{0}\selectfont What is Real-time Database?}}
+{\fontsize{14}{0}\selectfont
+\noindent
+A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
+
+\hspace{1cm}The Realtime Database is a NoSQL database and as such has different optimizations and functionality compared to a relational database. The Realtime Database API is designed to only allow operations that can be executed quickly. The Firebase Real-time Database is a cloud-hosted database. Data is stored as \ac{JSON} and synchronized in real-time to every connected client. When you build cross-platform apps with our Apple platforms, Android, and JavaScript \ac{SDK}s, all of your clients share one Real-time Database instance and automatically receive updates with the newest data.
+
+\hspace{1cm}Real-time data is behind many of the apps and services that inform our daily lives. It is critical to the accuracy of weather apps and hurricane and earthquake monitoring systems. It's also what allows us to get up-to-the-minute election results, traffic updates and geographical data.
+
+}
+\newpage
+\section{{\fontsize{16}{0}\selectfont Key Capabilities}}
+{\fontsize{14}{0}\selectfont
+\noindent
+There are certain capabilities that help this type of database to achieve its working. These are as follows - 
+\vspace{.5cm}
+
+\begin{enumerate}
+  \item  \textbf{Real-time} : %textbf ne bold hote
+  
+  {\fontsize{14}{0}\selectfont Instead of typical \ac{HTTP} requests, the Firebase Real-time Database uses data synchronization—every time data changes, any connected device receives that update within milliseconds. Provide collaborative and immersive experiences without thinking about networking code.}
+  
+  \item \textbf{Offline} : 
+  
+  {\fontsize{14}{0}\selectfont Firebase apps remain responsive even when offline because the Firebase Realtime Database \ac{SDK} persists your data to disk. Once connectivity is reestablished, the client device receives any changes it missed, synchronizing it with the current server state.}
+  
+  \item \textbf{Accessible from Client Devices} :
+  
+  {\fontsize{14}{0}\selectfont The Firebase Realtime Database can be accessed directly from a mobile device or web browser; there’s no need for an application server. Security and data validation are available through the Firebase Realtime Database Security Rules, expression-based rules that are executed when data is read or written.}
+
+
+  \item \textbf{Scale across multiple databases} :
+  
+  {\fontsize{14}{0}\selectfont With Firebase Realtime Database on the Blaze pricing plan, you can support your app's data needs at scale by splitting your data across multiple database instances in the same Firebase project. Streamline authentication with Firebase Authentication on your project and authenticate users across your database instances. Control access to the data in each database with custom Firebase Realtime Database Security Rules for each database instance.}
+  
+  
+\end{enumerate}
+}
+
+\section{{\fontsize{16}{0}\selectfont How does it work?}}
+{\fontsize{14}{0}\selectfont
+\noindent
+The Firebase Realtime Database lets you build rich, collaborative applications by allowing secure access to the database directly from client-side code. Data is persisted locally, and even while offline, realtime events continue to fire, giving the end user a responsive experience. When the device regains connection, the Realtime Database synchronizes the local data changes with the remote updates that occurred while the client was offline, merging any conflicts automatically.
+
+\hspace{1cm}The Realtime Database is a NoSQL database and as such has different optimizations and functionality compared to a relational database. The Realtime Database \ac{API} is designed to only allow operations that can be executed quickly. The Firebase Real-time Database is a cloud-hosted database. Data is stored as \ac{JSON} and synchronized in real-time to every connected client. When you build cross-platform apps with our Apple platforms, Android, and JavaScript \ac{SDK}s, all of your clients share one Real-time Database instance and automatically receive updates with the newest data.
+
+\hspace{1cm}The Realtime Database is a NoSQL database and as such has different optimizations and functionality compared to a relational database. The Realtime Database \ac{API} is designed to only allow operations that can be executed quickly. This enables you to build a great realtime experience that can serve millions of users without compromising on responsiveness. Because of this, it is important to think about how users need to access your data and then structure it accordingly.
+
+\hspace{1cm}We can understand it more by looking at an example.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=15cm]{realdbExample.png}
+    \caption{\fontsize{12}{0}\selectfont Realtime Database Example}
+    \label{fig:Example Database}
+\end{figure}
+
+\hspace{1cm}In Figure 2.1, we have a database named 'fir-demo-859b0' in which there are different nodes present. Information, Languages, ProgrammingKnowledge are the nodes which in turn may contain more nodes or the data in the form of key-value pairs.
+
+}
+
+\chapter{\fontsize{18}{0}\selectfont Services Of Firebase}
+{\fontsize{14}{0}\selectfont
+\noindent
+  Now we have known that firebase is a SDK which is used to make apps easily, but what exactly does it do to make it happen? The answer is it provides different services which are meant to be used by developers to ease up their development work. Following are some of the important services provided by firebase - 
+  \vspace{2cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=15cm]{Services.png}
+    \vspace{1cm}
+    \caption{\fontsize{12}{0}\selectfont Services of firebase}
+    \label{fig:services}
+\end{figure}
+\newpage
+
+\section{{\fontsize{16}{0}\selectfont Authentication}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Most apps need to know the identity of a user. Knowing a user's identity allows an app to securely save user data in the cloud and provide the same personalized experience across all of the user's devices.
+
+\hspace{1cm}Firebase Authentication provides backend services, easy-to-use \ac{SDK}s, and ready-made \ac{UI} libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
+
+\hspace{1cm}Firebase Authentication integrates tightly with other Firebase services, and it leverages industry standards like OAuth 2.0 and OpenID Connect, so it can be easily integrated with your custom backend.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{firebase-authentication2.png}
+    \vspace{1cm}
+    \caption{\fontsize{12}{0}\selectfont Authentication}
+    \label{fig:auth}
+\end{figure}
+}
+
+
+\section{{\fontsize{16}{0}\selectfont Database}}
+{\fontsize{14}{0}\selectfont
+\noindent
+The Firebase Realtime Database is a cloud-hosted NoSQL Database that lets organizations store and sync data in real time across all of their users' devices. This makes it easy to build apps that are always up to date, even when users are offline.
+}
+\section{{\fontsize{16}{0}\selectfont Cloud Messaging
+}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Firebase Cloud Messaging is a service that lets businesses send messages to their users' devices, even if they're not using the app. Developers can use FCM to send push notifications, update app content, and more.
+
+}
+\section{{\fontsize{16}{0}\selectfont Crashlytics
+}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Firebase Crashlytics is a lightweight, realtime crash reporter that helps you track, prioritize, and fix stability issues that erode your app quality. Crashlytics saves you troubleshooting time by intelligently grouping crashes and highlighting the circumstances that lead up to them.
+
+\hspace{1cm}Crashlytics synthesizes an avalanche of crashes into a manageable list of issues, provides contextual information, and highlights the severity and prevalence of crashes so you can pinpoint the root cause faster.
+
+\hspace{1cm}Crashlytics can capture your app's errors as app exception events in Analytics. The events simplify debugging by giving you access a list of other events leading up to each crash, and provide audience insights by letting you pull Analytics reports for users with crashes.
+
+}
+
+\section{{\fontsize{16}{0}\selectfont Test Lab
+}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Firebase Test Lab is a cloud-based app testing infrastructure that lets you test your app on a range of devices and configurations, so you can get a better idea of how it'll perform in the hands of live users.
+}
+}    
+\newpage
+\chapter{\fontsize{18}{0}\selectfont How to use these services? }
+\section{{\fontsize{16}{0}\selectfont Steps to use Firebase}}
+{\fontsize{14}{0}\selectfont
+\noindent
+To use above mentioned services a developer only need a valid google account which he can se to login to Firebase and initiate his/her project by selecting whatever services required to build the app.
+An user just have to follow these 4 steps to get all services of Fiberbase -
+ 
+\vspace{.5cm}
+
+\begin{enumerate}
+  \item   Log In to the Firebase website :
+  
+  We can login to firebase using our google account or email.
+  
+  
+  \item Create New Project : 
+  
+  We must create a project with an unique name which will be referred for providing the features and analysis.
+  
+  \item Once the project is ready, use whatever services you want, following their documentation :
+  
+  We can access all available features through the console of your project. We must read the documentation of each feature before using to ensure better functionality.  
+\end{enumerate}
+}
+\newpage
+
+\section{{\fontsize{16}{0}\selectfont An Example : To-do List}}
+{\fontsize{14}{0}\selectfont
+\noindent
+The code given in figure below is the script of a To-do List app made with Javascript. The looks and alignment is done with \ac{HTML}, \ac{CSS} but the actual functionality is given by JavaScript. With the help of Firebase it has became only 50 lines long while providing most of the functionality and without any cost to pay.
+\vspace{1cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=10cm]{CodeFirebase.png}
+    \caption{\fontsize{12}{0}\selectfont Javascript code of To-do List}
+    \label{fig:Javascriptcode}
+\end{figure}
+
+\hspace{1cm}The Firebase \ac{SDK} uses the modular programming approach to simplify its usage. In this example the developer has imported all of required already-written functions from the library of firebase. By understanding the output and input of these functions from the documentations, one can easily use them. Here we first initialize our app and then our database by using an unique key obtained from our projects console. Then we specify the input for our database i.e. our database must receive and store the list of tasks. 
+\vspace{1cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{TodoFirebase.png}
+    \caption{\fontsize{12}{0}\selectfont Preview of To-do List}
+    \label{fig:TodoList}
+\end{figure}
+
+\hspace{1cm} After completing the scripting of \ac{HTML} elements our app becomes ready. Every individual with this app on their device will be able to add tasks in it and the added tasks will be updated on all devices because of Realtime database. This app can be used by teams or groups as a feature of their project management.
+ }
+
+\chapter{\fontsize{18}{0}\selectfont Advantages and Disadvantages }
+\section{{\fontsize{16}{0}\selectfont Advantages of Firebase}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Following are some advantages of using firebase -
+ 
+\vspace{.5cm}
+
+\begin{enumerate}
+  \item  \textbf{Reliable and Extensive Databases} :
+  
+  Firebase works under the flag of Google, and that’s why it provides powerful databases for web and mobile application development.
+  \item  \textbf{Provides A Free Start to Newbies} :
+  
+    With the free services of Firebase, it is convenient for beginners to understand how their app works in a real environment.
+  \item  \textbf{Firebase Cloud Messaging for Cross-Platform} :
+  
+    The key capabilities of FCM consist of sending simple notification messages, sending notifications from client apps, and versatile message targeting.
+  \item  \textbf{Free Multi-Platform Firebase Authentication} :
+  
+    Firebase Authentication doesn’t only use emails, passwords and phone numbers to conduct this process but also supports federated identity providers. Indeed, users can sign-in into their applications with the help of Google, Twitter, GitHub Facebook etc.
+  \item  \textbf{Machine Learning Capabilities} :
+  
+   It is also a magical advantage of Firebase and is known as Firebase Machine Learning or ML Kit. With dedicated \ac{API}s, you can use \ac{ML} Kit for barcode scanning, recognizing text, labeling images, and face detection etc.
+
+
+
+  
+\end{enumerate}
+}
+
+\section{{\fontsize{16}{0}\selectfont Disadvantages of Firebase}}
+{\fontsize{14}{0}\selectfont
+\noindent
+Following are some disadvantages of using firebase -
+ 
+\vspace{.5cm}
+
+\begin{enumerate}
+  \item  \textbf{Closed Source Platform} :
+  
+  Given Firebase’s closed-source architecture, app developers’ control over the platform is highly restricted.
+  \item  \textbf{Can be Expensive } :
+  
+   Firebase is a powerful platform for app development, but all the amazing features may be expensive. The free plan offers only basic features that lack the advanced functions that simplify and expedites all development tasks. For many, the self-hosting option is more cost-efficient.
+
+  \item  \textbf{Not available globally} :
+  
+    Since Firebase is an official Google product with its URL taking a Google subdomain, i.e., firebase.google.com, the service is blocked in China and other countries that block Google services.
+
+  \item  \textbf{Do not support Relational Database} :
+  
+    The Realtime database of firebase do not support relational database like tables. 
+
+  
+
+
+
+  
+\end{enumerate}
+}
+ 
+\newpage
+
+\chapter{\fontsize{18}{0}\selectfont Conclusion }
+{\fontsize{14}{0}\selectfont
+\noindent
+   Firebase is quite a useful tool to be used by developers. It provides an easy to use interface, detailed documentations, free access and more. It is becoming more famous day by day and being used by many industries.
+   
+   \hspace{1cm}For beginners Firebase is a best option to learn the concepts of database and actually deploying their projects as all the basic features provided by firebase are free of cost. It also works for cross-platform applications hence it becomes very easy to develop certain apps that can work on many platforms like windows, android, etc.
+
+   \hspace{1cm}Firebase ha also got the branding of google, which makes it trustworthy but it also increases the cost that we have to pay to access or scale certain features. To overcome this issue developers use only some cost-efficient features of firebase namely database and authentication. We might want to consider other options only if we don’t have much budget or if the app won’t be a cost-effective product.
+}
+\newpage
+
+
+%use this section if you want to add acronym list.
+\section*{List of Acronyms}
+\begin{acronym}
+ \acro{SDK}{Software Development Kit}
+ \acro{API}{Application Programming Interface}
+ \acro{iOS}{iPhone Operating System}
+ \acro{Baas}{ Backend-as-a-service}
+ \acro{OS}{Operating System}
+ \acro{GUI}{Graphical user interface}
+ \acro{JSON}{JavaScript Object Notation}
+ \acro{HTTP}{Hyper text transfer protocol}
+ \acro{UI}{User Interface}
+ \acro{HTML}{Hyper Text Markup Language}
+ \acro{CSS}{Cascading Style Sheet}
+ \acro{ML}{Machine Learning}
+ 
+\end{acronym}
+\newpage
+
+%bibiliography, reference
+%\bibitem{type of ref} name of reference or link
+
+\begin{thebibliography}{9}
+\bibitem{documentation} Firebase Documentation \emph{https://firebase.google.com/docs} %emph ne italic hote
+\bibitem{Wiki}
+Wikipedia page of Firebase \emph{https://en.wikipedia.org/wiki/Firebase}
+\end{thebibliography}
+ 
+\end{document}% everything should be between begin{document}...end{document}
